@@ -1,12 +1,29 @@
-# Chenasraf tap
+# chenasraf homebrew tap
+
+Install my package formulae from this tap if you are using Homebrew.
 
 ## How do I install these formulae?
 
-`brew install chenasraf/tap/<formula>`
+### Install package directly
 
-Or `brew tap chenasraf/tap` and then `brew install <formula>`.
+This installs one specific package from the tap:
 
-Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
+```sh
+brew install chenasraf/tap/<formula>
+```
+
+### Install tap
+
+This is how you install the tap, so you will be able to see and install any packages from it:
+
+```sh
+brew tap chenasraf/tap
+brew install <formula>
+```
+
+### In Brewfile
+
+In a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
 tap "chenasraf/tap"
@@ -19,4 +36,4 @@ brew "<formula>"
 
 ## Documentation
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+See more info about brew using `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
