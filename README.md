@@ -1,17 +1,21 @@
-# Chenasraf Treelike
+# Chenasraf tap
 
 ## How do I install these formulae?
 
-`brew install chenasraf/treelike/<formula>`
+`brew install chenasraf/tap/<formula>`
 
-Or `brew tap chenasraf/treelike` and then `brew install <formula>`.
+Or `brew tap chenasraf/tap` and then `brew install <formula>`.
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
-tap "chenasraf/treelike"
+tap "chenasraf/tap"
 brew "<formula>"
 ```
+
+## Available Formulae
+
+- `treelike` - https://github.com/chenasraf/treelike
 
 ## Documentation
 
