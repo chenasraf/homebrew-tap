@@ -13,6 +13,6 @@ class GiGen < Formula
   end
 
   test do
-    assert_match "Usage: gi_gen [options]", shell_output("gi_gen -h 2>&1 | head -1")
+    assert_match "Usage: gi_gen [options]", shell_output("#{bin}/gi_gen -h 2>&1 | head -1")
   end
 end

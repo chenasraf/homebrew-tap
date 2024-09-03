@@ -13,6 +13,6 @@ class Treelike < Formula
   end
 
   test do
-    assert_match ".\n└── a\n    └── b\n", shell_output("echo 'a\n  b' | treelike -")
+    assert_match ".\n└── a\n    └── b\n", shell_output("echo 'a\n  b' | #{bin}/treelike -")
   end
 end
