@@ -32,6 +32,7 @@ brew "<formula>"
 
 ## Available Formulae
 
+- [sofmani](https://github.com/chenasraf/sofmani) - Installs software from a declerative config on any system
 - [treelike](https://github.com/chenasraf/treelike) - Outputs a Tree-like representation from
   strings
 - [gi_gen](https://github.com/chenasraf/gi_gen) - Gitignore generator for any type of project
