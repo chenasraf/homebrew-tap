@@ -19,5 +19,5 @@ rm "$REPO_NAME-$VERSION.tar.gz"
 sed -i.bak "s/sha256 \".*\"/sha256 \"$hash\"/" "Formula/$REPO_NAME.rb"
 rm "Formula/$REPO_NAME.rb.bak"
 
-sed -i.bak "s|\\burl \".*\"|url \"$URL\"|" "Formula/$REPO_NAME.rb"
+sed -i.bak "s| url \".*\"| url \"$URL\"|" "Formula/$REPO_NAME.rb"
 rm "Formula/$REPO_NAME.rb.bak"
