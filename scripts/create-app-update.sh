@@ -8,7 +8,9 @@ VERSION=$(curl -s "https://api.github.com/repos/chenasraf/$REPO_NAME/releases/la
 
 echo "Version: $VERSION"
 
-git switch -c "feature/$REPO_NAME"
+if ! git switch -C "feature/$REPO_NAME-$VERSION"; then
+  echo "Branch already exists, aborting"
+fi
 git add "Formula/$REPO_NAME.rb"
 git commit -m "feat: update $REPO_NAME to $VERSION"
 git push origin
