@@ -17,7 +17,7 @@ git commit -m "feat: update $REPO_NAME to $VERSION"
 git push --set-upstream origin "$BRANCH"
 
 if gh pr create --fill; then
-  echo open -u "$(gh pr list --json url | jq -r '.[0].url')"
+  open -u "$(gh pr list --json url | jq -r '.[0].url')"
 else
   echo "Couldn't create PR, aborting"
 fi
