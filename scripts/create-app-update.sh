@@ -18,6 +18,7 @@ git push --set-upstream origin "$BRANCH"
 
 if gh pr create --fill; then
   open -u "$(gh pr list --json url | jq -r '.[0].url')"
+  git switch master
 else
   echo "Couldn't create PR, aborting"
 fi
