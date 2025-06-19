@@ -6,10 +6,10 @@ class Sofmani < Formula
   license "CC0-1.0"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/sofmani-1.9.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "6452e55590d1417844df1b9c6be9efd6aeaa058821569123045729aae1f8a886"
-    sha256 cellar: :any_skip_relocation, ventura:      "98246cddfcf913bd120a5c3909cbad126f6cf9c5feffc58a1774788cb97577ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f3ca402d516f003c9ce09e739590b69bcdea09e6417f6b47c7ad5bde84812ea5"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/sofmani-1.9.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "57e1e6cb85081132d86323a564deeb969bdefc47d8119e5aad0aaad874b94ce9"
+    sha256 cellar: :any_skip_relocation, ventura:      "7ba2add293c6571d35adbb8f0b8b41202ce34661632ef128599b08562e3d83bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "688297f07f422759a1f128c9fc6684ef898d75353756198afba14e08e544d170"
   end
 
   depends_on "go" => [:build]
