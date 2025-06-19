@@ -37,6 +37,7 @@ class DirenvDotenvx < Formula
   end
 
   test do
-    assert_path_exists libexec/"use_dotenvx.sh"
+    direnv_lib = File.expand_path("~/.config/direnv/lib")
+    assert_path_exists direnv_lib/"use_dotenvx.sh"
   end
 end
