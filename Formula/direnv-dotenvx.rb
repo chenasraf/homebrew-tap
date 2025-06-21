@@ -20,24 +20,39 @@ class DirenvDotenvx < Formula
     direnv_lib = File.expand_path("~/.config/direnv/lib")
     mkdir_p direnv_lib
 
-    # Symlink into global location
-    ln_sf libexec/"use_dotenvx.sh", "#{direnv_lib}/use_dotenvx.sh"
+    source = "#{libexec}/use_dotenvx.sh"
+    target = "#{direnv_lib}/use_dotenvx.sh"
+
+    # Only create the symlink if it doesn't already exist or points elsewhere
+    ln_sf source, target if !File.exist?(target) || !File.identical?(source, target)
   end
 
   def caveats
     <<~EOS
-      use_dotenvx is now available globally to direnv.
+      ✅ Plugin installed: #{opt_libexec}/use_dotenvx.sh
 
-      In your .envrc:
-        use_dotenvx
+      To use it in your .envrc, you have two options:
 
-      Then run:
+      1. Source it directly:
+
+           source #{opt_libexec}/use_dotenvx.sh
+
+      2. Or link it globally for short-form use:
+
+           mkdir -p ~/.config/direnv/lib
+           ln -s #{opt_libexec}/use_dotenvx.sh ~/.config/direnv/lib/use_dotenvx.sh
+
+         Then in your .envrc:
+
+           use_dotenvx
+
+      After that, run:
+
         direnv allow
     EOS
   end
 
   test do
-    direnv_lib = File.expand_path("~/.config/direnv/lib")
-    assert_path_exists direnv_lib/"use_dotenvx.sh"
+    assert_path_exists libexec/"use_dotenvx.sh"
   end
 end
