@@ -26,5 +26,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           echo "🚀 Triggering update..."
-          REPO_NAME="${{ github.event.client_payload.repo }}" make create-app-update
+          make create-app-update REPO_NAME="${{ github.event.client_payload.repo }}"
 
