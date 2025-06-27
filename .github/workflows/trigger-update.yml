@@ -1,4 +1,3 @@
-# .github/workflows/on-dispatch.yml
 name: React to Dispatch
 
 on:
@@ -12,7 +11,8 @@ permissions:
 
 
 jobs:
-  build:
+  create-update-pr:
+    name: Create Update PR
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
