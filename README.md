@@ -35,6 +35,7 @@ brew "<formula>"
 | Name                                                          | Description                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------- |
 | [sofmani](https://github.com/chenasraf/sofmani)               | Installs software from a declerative config on any system |
+| [vstask](https://github.com/chenasraf/vstask)                 | Run VS Code tasks.json from the terminal                  |
 | [treelike](https://github.com/chenasraf/treelike)             | Outputs a Tree-like representation from strings           |
 | [gi_gen](https://github.com/chenasraf/gi_gen)                 | Gitignore generator for any type of project               |
 | [direnv-dotenvx](https://github.com/chenasraf/direnv-dotenvx) | A direnv plugin to load .env files using dotenvx          |
