@@ -10,9 +10,8 @@ update-hash:
 	echo "Version: $$VERSION"; \
 	echo "URL: $$URL"; \
 	curl -Ls "$$URL" -o "$$REPO_NAME-$$VERSION.tar.gz"; \
-	echo -n "SHA256: "; \
 	HASH=$$(sha256sum "$$REPO_NAME-$$VERSION.tar.gz" | awk '{print $$1}'); \
-	echo "$$HASH"; \
+	printf "SHA256: %s\n" "$$HASH"; \
 	rm "$$REPO_NAME-$$VERSION.tar.gz"; \
 	sed -i.bak "s/sha256 \".*\"/sha256 \"$$HASH\"/" "Formula/$$REPO_NAME.rb"; \
 	rm "Formula/$$REPO_NAME.rb.bak"; \
@@ -45,3 +44,21 @@ create-app-update:
 		echo "Couldn't create PR, aborting"; \
 		exit 1; \
 	fi
+
+.PHONY: create-app
+create-app:
+	@if [ -z "$$REPO_NAME" ]; then \
+		read -r -p "Enter repository name: " REPO_NAME; \
+	else \
+		REPO_NAME="$$REPO_NAME"; \
+	fi; \
+	if [ -f "Formula/$$REPO_NAME.rb" ]; then \
+		echo "Formula/$$REPO_NAME.rb already exists, aborting"; \
+		exit 1; \
+	fi; \
+	VERSION=$$(curl -s "https://api.github.com/repos/chenasraf/$$REPO_NAME/releases/latest" | jq -r .tag_name); \
+	URL="https://github.com/chenasraf/$$REPO_NAME/archive/refs/tags/$$VERSION.tar.gz"; \
+	HOMEBREW_EDITOR=cat brew create --tap chenasraf/tap --set-name "$$REPO_NAME" "$$URL"; \
+	echo "Created Formula/$$REPO_NAME.rb"; \
+	echo "Version: $$VERSION"; \
+	echo "URL: $$URL"
