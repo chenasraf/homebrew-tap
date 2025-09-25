@@ -6,10 +6,10 @@ class Vstask < Formula
   license "CC0-1.0"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/vstask-1.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "b92801480c5a90014de4c4fe1ac2f0dbc09f684e12c891e46581268d2cffcfb8"
-    sha256 cellar: :any_skip_relocation, ventura:      "7254947dc610900a05447e70002753867b98cc5fa28cc4068aadef23c5d22a20"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1796545af93e3bd49f748f8b92d01e3956e3647b787ba1cd2ef3664f99b468ac"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/vstask-1.1.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "728f8a101e1c6f0afc0f0c7f37352e3faf12cbdcaa8eeb9bb86d4d0b6c5f5bd2"
+    sha256 cellar: :any_skip_relocation, ventura:      "51fbc2d85f8e4fb01f3874db88da74b12d1fa227c83f72d088d0c2956264bb67"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5abace5d36a881b5ca59b221916393b38879ef7acf43a9e3626eaa2b4c25a790"
   end
 
   depends_on "go" => [:build]
