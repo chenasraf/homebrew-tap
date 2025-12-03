@@ -1,8 +1,8 @@
 class Watchr < Formula
   desc "Terminal UI for running and watching command output"
   homepage "https://github.com/chenasraf/watchr"
-  url "https://github.com/chenasraf/watchr/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "ff15abad1614caed8ca79cedb3f47de24fa1144bc40855004a77b63edce5a8b6"
+  url "https://github.com/chenasraf/watchr/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "80184ec16651a8729d7a106afd569fd69820020366a49753ee430abcea185a2e"
   license "MIT"
 
   bottle do
