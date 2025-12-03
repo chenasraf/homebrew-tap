@@ -39,7 +39,7 @@ brew "<formula>"
 | [sofmani](https://github.com/chenasraf/sofmani)               | Installs software from a declerative config on any system |
 | [treelike](https://github.com/chenasraf/treelike)             | Outputs a Tree-like representation from strings           |
 | [vstask](https://github.com/chenasraf/vstask)                 | Run VS Code tasks.json from the terminal                  |
-| [watchr](https://github.com/chenasraf/wachr)                  | Terminal UI for running and watching command output       |
+| [watchr](https://github.com/chenasraf/watchr)                 | Terminal UI for running and watching command output       |
 
 ## Documentation
 
