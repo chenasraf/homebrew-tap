@@ -21,6 +21,7 @@ jobs:
       - name: Create App Update PR
         env:
           GH_TOKEN: ${{ secrets.REPO_DISPATCH_PAT }}
+          PR_BODY: ${{ github.event.client_payload.body }}
         run: |
           echo "🛠️ Preparing git credentials..."
           git config --global user.name "github-actions[bot]"

@@ -34,6 +34,16 @@ jobs:
           PULL_REQUEST: ${{ github.event.pull_request.number }}
         run: brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
 
+      - name: Update release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_BRANCH: ${{ github.event.pull_request.head.ref }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          # Extract tag from branch name (e.g., "feature/sofmani-v1.18.0" -> "sofmani-v1.18.0")
+          TAG="${PR_BRANCH#feature/}"
+          gh release edit "$TAG" --notes "$PR_BODY"
+
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
         with:

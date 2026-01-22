@@ -36,7 +36,11 @@ create-app-update:
 	git add "Formula/$$REPO_NAME.rb"; \
 	git commit -m "feat: update $$REPO_NAME to $$VERSION"; \
 	git push --force --set-upstream origin "$$BRANCH"; \
-	if gh pr create --fill; then \
+	PR_ARGS="--fill"; \
+	if [ -n "$$PR_BODY" ]; then \
+		PR_ARGS="$$PR_ARGS --body \"$$PR_BODY\""; \
+	fi; \
+	if eval gh pr create $$PR_ARGS; then \
 		URL=$$(gh pr list --json url | jq -r '.[0].url'); \
 		open "$$URL"; \
 		git switch master; \
