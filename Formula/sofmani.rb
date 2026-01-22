@@ -1,8 +1,8 @@
 class Sofmani < Formula
   desc "Installs software from a declerative config on any system"
   homepage "https://github.com/chenasraf/sofmani"
-  url "https://github.com/chenasraf/sofmani/archive/refs/tags/v1.18.0.tar.gz"
-  sha256 "86ad4da816a005df9e84306ab8d9e08f51f68bb7e3f7c93e21de1f84486f3fe1"
+  url "https://github.com/chenasraf/sofmani/archive/refs/tags/v1.19.0.tar.gz"
+  sha256 "5c98f1983c5dba778d89a9108e912b844a85f1e66d373c263afd6e9eb3ea1867"
   license "CC0-1.0"
 
   bottle do
