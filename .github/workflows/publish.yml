@@ -41,8 +41,10 @@ jobs:
           PR_BRANCH: ${{ github.event.pull_request.head.ref }}
           PR_BODY: ${{ github.event.pull_request.body }}
         run: |
-          # Extract tag from branch name (e.g., "feature/sofmani-v1.18.0" -> "sofmani-v1.18.0")
+          # Extract tag from branch name (e.g., "feature/vstask-v1.2.0" -> "vstask-1.2.0")
+          # Remove "feature/" prefix, then remove "v" before version number
           TAG="${PR_BRANCH#feature/}"
+          TAG=$(echo "$TAG" | sed 's/-v\([0-9]\)/-\1/')
           printf '%s\n' "$PR_BODY" > /tmp/release_notes.md
           gh release edit "$TAG" --notes-file /tmp/release_notes.md
           rm -f /tmp/release_notes.md
