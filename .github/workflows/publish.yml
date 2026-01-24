@@ -44,7 +44,7 @@ jobs:
           # Extract tag from branch name (e.g., "feature/vstask-v1.2.0" -> "vstask-1.2.0")
           # Remove "feature/" prefix, then remove "v" before version number
           TAG="${PR_BRANCH#feature/}"
-          TAG=$(echo "$TAG" | sed 's/-v\([0-9]\)/-\1/')
+          TAG="${TAG/-v/-}"
           printf '%s\n' "$PR_BODY" > /tmp/release_notes.md
           gh release edit "$TAG" --notes-file /tmp/release_notes.md
           rm -f /tmp/release_notes.md
