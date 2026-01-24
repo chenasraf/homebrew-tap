@@ -6,10 +6,10 @@ class Watchr < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/watchr-1.5.2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "54320e8c60384c64fad89b88c8af5c5e256d4421fe163e38fed78bc82d85187a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "507c6ccec5d5467322d2c7183071354338403dee5a64f1afffb48c08317d1e55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "72db54806255740638484ce678588092b437b999f695e1498c341ef92fa49d6d"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/watchr-1.6.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f20efe875f5ea4d4d23278129585c2633931949d20f4470aafc0f606687286bd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4bb22f7838833f458bd33eaae67206e69281aec0917efbccf70864fa86967b74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "28c7941ea800ed06a273b199cd2daa80cadca1a36ccb946d71869e33e0d038c6"
   end
 
   depends_on "go" => [:build]
