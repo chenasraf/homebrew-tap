@@ -37,7 +37,7 @@ jobs:
 
       - name: Generate bottle commit
         working-directory: ${{ steps.pr-pull.outputs.bottle_path }}
-        run: brew bottle --merge --write *.bottle.json
+        run: brew bottle --merge --write ./*.bottle.json
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
