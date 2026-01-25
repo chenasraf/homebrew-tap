@@ -28,11 +28,28 @@ jobs:
       - name: Set up git
         uses: Homebrew/actions/git-user-config@master
 
-      - name: Pull bottles
+      - name: Pull bottles (no upload)
+        id: pr-pull
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
           PULL_REQUEST: ${{ github.event.pull_request.number }}
-        run: brew pr-pull --debug --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
+        run: brew pr-pull --debug --no-upload --retain-bottle-dir --tap="$GITHUB_REPOSITORY" "$PULL_REQUEST"
+
+      - name: Generate bottle commit
+        working-directory: ${{ steps.pr-pull.outputs.bottle_path }}
+        run: brew bottle --merge --write *.bottle.json
+
+      - name: Push commits
+        uses: Homebrew/actions/git-try-push@master
+        with:
+          token: ${{ github.token }}
+          branch: master
+
+      - name: Upload bottles and create release
+        working-directory: ${{ steps.pr-pull.outputs.bottle_path }}
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+        run: brew pr-upload --upload-only
 
       - name: Update release notes
         if: github.event.pull_request.body != ''
@@ -48,12 +65,6 @@ jobs:
           printf '%s\n' "$PR_BODY" > /tmp/release_notes.md
           gh release edit "$TAG" --notes-file /tmp/release_notes.md
           rm -f /tmp/release_notes.md
-
-      - name: Push commits
-        uses: Homebrew/actions/git-try-push@master
-        with:
-          token: ${{ github.token }}
-          branch: master
 
       - name: Delete branch
         if: github.event.pull_request.head.repo.fork == false
