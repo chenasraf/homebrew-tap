@@ -38,6 +38,7 @@ brew "<formula>"
 | [gi_gen](https://github.com/chenasraf/gi_gen)                 | Gitignore generator for any type of project               |
 | [sofmani](https://github.com/chenasraf/sofmani)               | Installs software from a declerative config on any system |
 | [treelike](https://github.com/chenasraf/treelike)             | Outputs a Tree-like representation from strings           |
+| [tx](https://github.com/chenasraf/tx)                         | Tmux session manager                                      |
 | [vstask](https://github.com/chenasraf/vstask)                 | Run VS Code tasks.json from the terminal                  |
 | [watchr](https://github.com/chenasraf/watchr)                 | Terminal UI for running and watching command output       |
 
