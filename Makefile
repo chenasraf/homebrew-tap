@@ -66,6 +66,10 @@ create-app:
 		exit 1; \
 	fi; \
 	VERSION=$$(curl -s "https://api.github.com/repos/chenasraf/$$REPO_NAME/releases/latest" | jq -r .tag_name); \
+	if [ -z "$$VERSION" ] || [ "$$VERSION" = "null" ]; then \
+		echo "Could not fetch latest version for $$REPO_NAME, aborting"; \
+		exit 1; \
+	fi; \
 	URL="https://github.com/chenasraf/$$REPO_NAME/archive/refs/tags/$$VERSION.tar.gz"; \
 	HOMEBREW_EDITOR=cat brew create --tap chenasraf/tap --set-name "$$REPO_NAME" "$$URL"; \
 	echo "Created Formula/$$REPO_NAME.rb"; \
