@@ -6,10 +6,10 @@ class CospendCli < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/cospend-cli-1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c70775bb59738f308c64d6ee2b3eec1e52632f02bba6abcb9de68ddec7a9ef78"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8a547b5af4898a1e2f19116e684e0df9a2ddbfdf2725ed35fb758122d75f585f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "910a22a7a2cefd41fad6a7981415cd7e6ef6844afdb1381e19daf0222456408c"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/cospend-cli-1.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "830e20fea26b32ca5a04fae4331b64434088a721ff6ca2cf2a96afcdb6d89045"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ec81b3a37eb55329a8019eee3c9ff62950a33da2fa09b6fa3aac2fec240bb1af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2842d5a391f802265e7946c00f65013ccbaf0914041307b84abf0fdc9ff2d7e9"
   end
 
   depends_on "go" => [:build]
