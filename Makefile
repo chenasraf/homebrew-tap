@@ -74,4 +74,32 @@ create-app:
 	HOMEBREW_EDITOR=cat brew create --tap chenasraf/tap --set-name "$$REPO_NAME" "$$URL"; \
 	echo "Created Formula/$$REPO_NAME.rb"; \
 	echo "Version: $$VERSION"; \
-	echo "URL: $$URL"
+	echo "URL: $$URL"; \
+	echo ""; \
+	echo "Please edit Formula/$$REPO_NAME.rb and press Enter when done..."; \
+	read -r _; \
+	BRANCH="feature/$$REPO_NAME-$$VERSION"; \
+	if ! git switch -C "$$BRANCH"; then \
+		echo "Branch already exists, aborting"; \
+		exit 1; \
+	fi; \
+	git add "Formula/$$REPO_NAME.rb"; \
+	git commit -m "feat: add $$REPO_NAME $$VERSION"; \
+	git push --force --set-upstream origin "$$BRANCH"; \
+	if [ -n "$$PR_BODY" ]; then \
+		printf '%s\n' "$$PR_BODY" > /tmp/pr_body.md; \
+		gh pr create --fill --body-file /tmp/pr_body.md; \
+		PR_EXIT=$$?; \
+		rm -f /tmp/pr_body.md; \
+	else \
+		gh pr create --fill; \
+		PR_EXIT=$$?; \
+	fi; \
+	if [ $$PR_EXIT -eq 0 ]; then \
+		URL=$$(gh pr list --json url | jq -r '.[0].url'); \
+		open "$$URL"; \
+		git switch master; \
+	else \
+		echo "Couldn't create PR, aborting"; \
+		exit 1; \
+	fi
