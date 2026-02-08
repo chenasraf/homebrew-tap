@@ -1,8 +1,8 @@
 class Tx < Formula
   desc "Tmux session manager"
   homepage "https://github.com/chenasraf/tx"
-  url "https://github.com/chenasraf/tx/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "e77abcd2233ac996c816d1f29c46e827694691d50286fa294cd9bc9c034587ab"
+  url "https://github.com/chenasraf/tx/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "dfc94d97902d4b40564bb5a54aed9c6783ccbef7852ce1caafb0c0963ef25462"
   license "MIT"
 
   bottle do
