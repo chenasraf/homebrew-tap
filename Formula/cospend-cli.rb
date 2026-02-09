@@ -1,8 +1,8 @@
 class CospendCli < Formula
   desc "Command-line interface for adding expenses to Nextcloud Cospend projects"
   homepage "https://github.com/chenasraf/cospend-cli"
-  url "https://github.com/chenasraf/cospend-cli/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "ff7e6a29ba6b72e9e368a6e5c3c7dfc3d2fb00eb2cebc71e0f01e973497e31af"
+  url "https://github.com/chenasraf/cospend-cli/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "4d1a3e841249ab204833fb35c13207cbac52e84858b556fba11ef0f92b9cd802"
   license "MIT"
 
   bottle do
