@@ -1,8 +1,8 @@
 class Sofmani < Formula
   desc "Installs software from a declerative config on any system"
   homepage "https://github.com/chenasraf/sofmani"
-  url "https://github.com/chenasraf/sofmani/archive/refs/tags/v1.19.1.tar.gz"
-  sha256 "cac057d52e588166964685f49c0fc39fe487f5efd39955abff58f2120db6cc98"
+  url "https://github.com/chenasraf/sofmani/archive/refs/tags/v1.20.0.tar.gz"
+  sha256 "e6863da6882ed0dbc4172c05440a24e35585d8a681a3bacede8ccf11f62fc9c1"
   license "CC0-1.0"
 
   bottle do
@@ -20,6 +20,6 @@ class Sofmani < Formula
   end
 
   test do
-    assert_match "Usage: sofmani [options] [config_file]", shell_output("#{bin}/sofmani -h")
+    assert_match "sofmani [flags] [config_file]", shell_output("#{bin}/sofmani -h")
   end
 end
