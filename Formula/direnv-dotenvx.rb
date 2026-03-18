@@ -6,10 +6,10 @@ class DirenvDotenvx < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/direnv-dotenvx-1.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "600a5dcc2d0f55eaeeff5821a4de4da5d8a1219aff412a3c17c0baeb8a76d228"
-    sha256 cellar: :any_skip_relocation, ventura:      "4fbd57ffc3f3c08e05d8bb58b11c9ad9728c2d9a647ceb93d97a77fd5e7763fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "bac693955f64114d57fbf3b21f2979623c7dcd0c55df908c2019b78c264b2239"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/direnv-dotenvx-1.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "65ef06da31f00660ece27a0476694f07f3ba3e9bd095599e6f22821f1e66153c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2a7b5ca7de9ff19a2849ceda45bf93e74a29c36ea66e99554ecf77d25eaac2bb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5def544ad9d9086464105dfaeb5aa1872094e74eeb6be42fa0f28ce295c1f8e9"
   end
 
   def install
