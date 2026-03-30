@@ -41,6 +41,7 @@ brew "<formula>"
 | [treelike](https://github.com/chenasraf/treelike)             | Outputs a Tree-like representation from strings                           |
 | [tx](https://github.com/chenasraf/tx)                         | Tmux session manager                                                      |
 | [vstask](https://github.com/chenasraf/vstask)                 | Run VS Code tasks.json from the terminal                                  |
+| [wand](https://github.com/chenasraf/wand)                     | YAML-driven command runner with nested subcommands                        |
 | [watchr](https://github.com/chenasraf/watchr)                 | Terminal UI for running and watching command output                       |
 
 ## Documentation
