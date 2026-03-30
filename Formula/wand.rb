@@ -1,8 +1,8 @@
 class Wand < Formula
   desc "YAML-driven command runner with nested subcommands"
   homepage "https://github.com/chenasraf/wand"
-  url "https://github.com/chenasraf/wand/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "5ba2616c1d1a94d15c8fa10da59fc0016b2e779f167fca385c16495f759d218a"
+  url "https://github.com/chenasraf/wand/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "f3dc53c355ba1fb5468d3870b68b960a50a321b9ec84d979d3a3bc5926ddc0fe"
   license "MIT"
 
   bottle do
