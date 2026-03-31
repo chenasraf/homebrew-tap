@@ -6,11 +6,11 @@ class Sofmani < Formula
   license "CC0-1.0"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/sofmani-1.24.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f50e8af168320fb81c9b0833c0159f4911a32a80b002cd247f903f559783744e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f55846cff31ec6acb00161dca73967f9490fc7ac5667137160382e9aeb63346f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7e99c4e56723c799dd53852803743554843ae3bc0c7c426dbde886cdd146a2e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ee9ef67c000266a9c6b962ce034a6f44199b6ad03a4658baa25b2f460af2eb32"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/sofmani-1.24.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a380804ab96af021e22d0130c1ba6108c9ddf045f869b554cebb0d5ab9922ba1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4d7bb83c9f6f733ea64796d45559f720e905d34c5a325dffa6ef15c9b0acf283"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a244aecc9c813e53e9f3959658c88fbffc645f6b096c2b634de960da624e6e30"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57783b18134a89562ad26de18a1af60e79f5c76f9f7225378ac1cfb2755f2556"
   end
 
   depends_on "go" => [:build]
