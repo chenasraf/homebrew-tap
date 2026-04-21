@@ -6,11 +6,11 @@ class Tx < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/tx-2.4.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b726c5d566a4e257cadc77fd8f9f4c5947e53af681960c03edd4e5f017dec592"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "54ff289ebb1d6a40886d9da51ef53856905a3bc1d5c9974c39d82638fd7d3de8"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a82993a3d3408b6ccf858d46ebd268a387250d2e0fe5f2ca9675d100a6ed8a4e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ac00a4ba0624ff32fb14d4f3a4a15e3554fe003bdedccb6f054289717251e230"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/tx-2.4.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c4862a340b26b34a86d20f5a12327313001911861f6c08409ec6014e42e2e189"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ab585f3fbcedff4c6a9658c4bebca52544549764b1e2cf73c779b493aa298f73"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "132107142d6f9f63e70c48fd531ff0ca2356f3939798c2157e5d044ef955a232"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d35bfb3a1b411a87988babee2936bda12315a78a1f2697fa139e81b5c9603ff"
   end
 
   depends_on "go" => [:build]
