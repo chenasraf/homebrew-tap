@@ -1,8 +1,8 @@
 class DirenvDotenvx < Formula
   desc "Plugin for direnv to load .env files using dotenvx"
   homepage "https://github.com/chenasraf/direnv-dotenvx"
-  url "https://github.com/chenasraf/direnv-dotenvx/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "73572d041722d0a659f16020d77e992119a58aad78bc2a1a42359e75d2f315a5"
+  url "https://github.com/chenasraf/direnv-dotenvx/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "d00b7d5d31b5a7d715e627fc4455a51dbad6b13db9d15e1644f708256acd9217"
   license "MIT"
 
   bottle do
