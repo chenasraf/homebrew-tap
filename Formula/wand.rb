@@ -6,11 +6,11 @@ class Wand < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/wand-1.5.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4d25b353e93ed39fc4d00a01a1ce0d285c91815a807b8abd5d746caf5b3944e7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5e4eb12f5d75c31803f51cca0798444196c91f3441695e5000e49aa9a1db5afd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cd2944946978823749d5de1ee716593310e5c4c00f6ee880f412ee175f2871f1"
-    sha256 cellar: :any,                 x86_64_linux:  "ed7752adae1f289545327afa9c11c3d7096d23ec61a929496bf62762195ed4a8"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/wand-1.6.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "edb11b939718f9f289f219561bc9bd7d370ec6f823f8f44915cbd70a9bab89dc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b48347acbe341931f792ca8e2996951fd36dbb4dc77c94fed1dba5d22797e0f2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c9ecb14251a48b99a308d6d7462a778096270ec0fd70b77623f6032b413195e2"
+    sha256 cellar: :any,                 x86_64_linux:  "b143e3b08389fcb1d1248843bd1eebc0169c493849bc45408328a4a48c4b8024"
   end
 
   depends_on "go" => [:build]
