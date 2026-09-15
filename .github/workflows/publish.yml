@@ -23,10 +23,10 @@ jobs:
           allowed-conclusions: success
 
       - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
 
       - name: Set up git
-        uses: Homebrew/actions/git-user-config@master
+        uses: Homebrew/actions/git-user-config@main
 
       - name: Pull bottles (no upload)
         id: pr-pull
@@ -40,7 +40,7 @@ jobs:
         run: brew bottle --merge --write ./*.bottle.json
 
       - name: Push commits
-        uses: Homebrew/actions/git-try-push@master
+        uses: Homebrew/actions/git-try-push@main
         with:
           token: ${{ github.token }}
           branch: master
