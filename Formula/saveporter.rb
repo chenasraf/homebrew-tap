@@ -1,8 +1,8 @@
 class Saveporter < Formula
   desc "Convert emulator save states between RetroArch, EmulatorJS and mGBA"
   homepage "https://github.com/chenasraf/saveporter"
-  url "https://github.com/chenasraf/saveporter/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "9accc3f45f1db7b7eed0c23ffc97552768bd1b25363da21cfdf5caa9342bf2fe"
+  url "https://github.com/chenasraf/saveporter/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "472e9aa434014243876e116ac6f927728aef0931c79e015371b25a5568ee871b"
   license "MIT"
 
   bottle do
