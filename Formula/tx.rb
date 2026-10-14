@@ -6,10 +6,10 @@ class Tx < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/tx-2.7.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "261b6c1038335bf5c80260680f87016cf8accfe5c479815ca0b09d804c207920"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a27f15ea15361410898eea5de1f064456b428f61428d50bed604f5ab4b34ad51"
-    sha256 cellar: :any,                 x86_64_linux:  "d1088e7abd1170a7d55d6d880270183b8099bb515cf58b4d542862b6b279a16f"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/tx-2.8.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6efd68804ea852fd8dd369c654b6c4d515d6ed0adc2dcc31024ed30e3ac07ffb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4dd02ea9aa68d545afc771bf5dbfd77078ba6d75559e3565393967b6e11105ef"
+    sha256 cellar: :any,                 x86_64_linux:  "5c1c38a19d82c9224f00d3107813f912cfde1129bb8c467dd64adc67f4871531"
   end
 
   depends_on "go" => [:build]
