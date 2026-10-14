@@ -6,10 +6,10 @@ class Saveporter < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/saveporter-0.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f75e39f73a8de5d4bdd723c6c93ebcaf9aed7bf1f445bdd5c06473d31449eb45"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "efeb9655a3d23b03e47a5256806c5e225175934caf4c6e85d2fba795d286ce4a"
-    sha256 cellar: :any,                 x86_64_linux:  "ca43a0a65f21c493504e24e84eb3317bfd5bfa6121d2d46c28d335408fd54c98"
+    root_url "https://github.com/chenasraf/homebrew-tap/releases/download/saveporter-0.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2e1a6412572ab6d756df776d21e239f7059c0d4bc467f5824eb257d40adb8dc8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4ad6ba082ee48c19d07b7f011590c14c7383a5af6b020faaaad58a7c4730c12a"
+    sha256 cellar: :any,                 x86_64_linux:  "03b4d3f07695afd06392d5e2e52478c86537f718fba0b1f0df5951bc4db4cb18"
   end
 
   depends_on "go" => [:build]
