@@ -1,8 +1,8 @@
 class Vstask < Formula
   desc "Run VS Code tasks.json from the terminal with deps and OS-aware execution"
   homepage "https://github.com/chenasraf/vstask"
-  url "https://github.com/chenasraf/vstask/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "70ff9fa05496f8c477f23467b85db165c506dad200da242127f07a83d6d9c0f5"
+  url "https://github.com/chenasraf/vstask/archive/refs/tags/v1.4.1.tar.gz"
+  sha256 "a53ff53771669e38df8aedeb5cdf61babe0c22845c6172343dd368712f0110f3"
   license "CC0-1.0"
 
   bottle do
